@@ -1,0 +1,34 @@
+{
+  "name": "googlebooks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "start:prod" : "node server.js",
+    "start:dev" : "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "seed": "node scripts/seedDB.js",
+    "install": "cd client && npm install",
+    "build" : "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reaver2021/GoogleBooks.git"
+  },
+  "author": "Griffin Sprague-Dixom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reaver2021/GoogleBooks/issues"
+  },
+  "homepage": "https://github.com/reaver2021/GoogleBooks#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.7.8"
+  }
+}
